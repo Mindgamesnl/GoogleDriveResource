@@ -22,7 +22,7 @@ async function handleStream(request) {
         let pu = "https://docs.google.com/u/0/uc?export=open&confirm=" + html + "&id=" + id;
         return proxyContent(pu, authCookie)
     } else {
-        return Response.redirect("https://docs.google.com/uc?export=open&id=" + id, 302);
+        return proxyContent("https://docs.google.com/uc?export=open&id=" + id, "");
     }
 }
 
